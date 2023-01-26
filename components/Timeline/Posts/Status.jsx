@@ -45,7 +45,7 @@ export default function Status() {
           />
           <textarea
             name="message"
-            placeholder={`What do you want to say to the world, ${profile?.name}?`}
+            placeholder={`What do you want to say, ${profile?.name}?`}
             className="h-[90px] w-full rounded-lg border border-transparent bg-gray-100 px-2 py-4 text-sm text-black placeholder-gray-400"
             value={content}
             onChange={(e) => setContent(e.target.value)}

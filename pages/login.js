@@ -33,7 +33,7 @@ export default function Login() {
               Our platform is designed to foster genuine connection and
               community. We believe that social media should bring people
               together, not exploit their personal information or flood them
-              with irrelevant content. That's why we are committed to creating a
+              with irrelevant content. That&apos;s why we are committed to creating a
               safer, more authentic online experience for all of our users.
             </p>
           </div>
