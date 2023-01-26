@@ -1,4 +1,5 @@
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import Link from "next/link";
 
 export default function Login() {
   const supabase = useSupabaseClient();
@@ -44,10 +45,10 @@ export default function Login() {
         >
           <div class="max-w-xl lg:max-w-3xl">
             <div class="relative -mt-16 block text-center ">
-              <a
+              <Link
                 class="inline-flex h-16 w-16 items-center justify-center rounded-full text-blue-600 sm:h-20 sm:w-20"
                 href="/"
-              ></a>
+              ></Link>
 
               <h1 class="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl">
                 Welcome 😎
