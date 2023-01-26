@@ -1,0 +1,69 @@
+import React from "react";
+import { BsThreeDots } from "react-icons/bs";
+
+const profiles = [
+  {
+    id: 1714510031,
+    name: "Avon Barksdale",
+    image:
+      "https://images.unsplash.com/photo-1673115540871-53f572a032df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+  },
+  {
+    id: 1714510032,
+    name: "Stella McCartney",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    id: 1714510033,
+    name: "Duke Deuce",
+    image:
+      "https://images.unsplash.com/photo-1673120770434-37d148312261?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 1714510034,
+    name: "January Jones",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    id: 1714510035,
+    name: "Charley Abraham",
+    image:
+      "https://images.unsplash.com/photo-1495216875107-c6c043eb703f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    id: 1714510036,
+    name: "Mohammed 'Mo' Mohammed",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+];
+
+export default function Friends() {
+  return (
+    <div className="mx-auto w-full flex-col rounded-lg p-2 pb-2 lg:flex">
+      <div className="flex flex-col items-center justify-center space-y-4">
+        <div className="h-auto w-full">
+          {profiles.map((profile) => (
+            <div
+              className="relative mb-3 flex cursor-pointer items-center justify-center py-1 hover:bg-gray-800 md:justify-start md:space-x-2"
+              key={profile.id}
+            >
+              <img
+                src={profile.image}
+                alt="user"
+                className="h-9 w-9 rounded-full shadow-md"
+              />
+
+              <BsThreeDots className="absolute right-0 hidden h-5 w-8 rounded-md hover:border lg:block" />
+              <p className="hidden cursor-pointer text-sm font-medium hover:text-blue-500 hover:underline md:inline-flex">
+                {profile.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

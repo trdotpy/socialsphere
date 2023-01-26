@@ -1,0 +1,33 @@
+{
+  "name": "woof-social",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/auth-ui-react": "^0.2.6",
+    "@supabase/supabase-js": "^2.2.3",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
+    "firebase": "^9.14.0",
+    "next": "13.0.4",
+    "next-auth": "^4.17.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^4.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "^3.2.4"
+  }
+}
