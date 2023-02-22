@@ -42,9 +42,8 @@ $ npm install
 $ touch .env
 
 # Set environment variables
-GOOGLE_ID = 'Enter Google Client ID'
-GOOGLE_SECRET = 'Enter Google Secret'
-NEXTAUTH_SECRET = 'Enter Next-Auth Secret'
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
 # Run the app
 $ npm run dev

@@ -20,15 +20,20 @@ export default function useData() {
   }
 
   function fetchProfile() {
-    supabase
-      .from("profiles")
-      .select("id, avatar, name")
-      .then((result) => {
-        console.log("profiles", result);
-        if (result.data.length > 0) {
-          setProfile(result.data[0]);
-        }
-      });
+    const user = session.user;
+
+    if (user) {
+      supabase
+        .from("profiles")
+        .select("id, avatar, name")
+        .eq("id", user.id)
+        .then((result) => {
+          console.log("profiles", result);
+          if (result.data.length > 0) {
+            setProfile(result.data[0]);
+          }
+        });
+    }
   }
 
   function sendPost(e) {

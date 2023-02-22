@@ -56,7 +56,6 @@ export default function Login() {
                     />
                   </svg>
                   <span>CIALPHERE</span>
-                  {/* <div className="ml-24 hidden md:block"></div> */}
                 </div>
               </div>
 
@@ -68,24 +67,12 @@ export default function Login() {
             </div>
 
             <div className="col-span-6 flex-col items-center space-y-4 py-4 text-center sm:flex">
-              {/* <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                Create an account
-              </button> */}
-
               <button
                 className="inline-block shrink-0 rounded-md border border-green-500 bg-green-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-green-600 focus:outline-none focus:ring active:text-green-500"
                 onClick={signInWithGoogle}
               >
                 Sign in With Google
               </button>
-
-              {/* <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                Already have an account?
-                <a href="#" className="text-gray-700 hover:text-sky-500">
-                  {" "}
-                  Log in
-                </a>
-              </p> */}
             </div>
           </div>
         </section>
