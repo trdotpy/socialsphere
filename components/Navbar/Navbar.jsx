@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Navbar() {
-  const [showMenu, setShowMenu] = useState(false);
-
   return (
     <>
-      <div className="flex items-center justify-center border-[1px] border-b border-gray-200 bg-gray-50 px-12 py-3 sm:hidden md:justify-between">
+      <div className="flex items-center justify-center border-[1px] border-b border-gray-200 bg-gray-50 px-12 py-3 md:hidden md:justify-between">
         {/* Branding */}
         <div className="inline-flex items-center text-xl">
           <span>S</span>{" "}

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Status from "../Status/Status";
 import Posts from "../Posts/Posts";
-import Stories from "../Stories";
 import useData from "../../hooks/useData";
+import Stories from "../Stories/Stories";
 
 export default function Feed() {
   const {
@@ -20,21 +20,24 @@ export default function Feed() {
     fetchProfile();
   }, []);
 
+  const memoizedPosts = useMemo(() => posts, [posts]);
+  const memoizedProfile = useMemo(() => profile, [profile]);
+
   return (
-    <div className="flex w-full flex-col items-center space-y-4 overflow-y-auto pt-8 scrollbar-hide px-4">
-      <div>
+    <div className="flex w-full flex-col items-center space-y-4 overflow-y-auto px-4 pt-8 scrollbar-hide">
+      <div className="mb-4">
         <Stories />
       </div>
       <div>
         <Status
-          profile={profile}
+          profile={memoizedProfile}
           content={content}
           sendPost={sendPost}
           setContent={setContent}
         />
         <div className="space-y-4">
-          {posts?.length > 0 &&
-            posts.map((post) => (
+          {memoizedPosts?.length > 0 &&
+            memoizedPosts.map((post) => (
               <Posts
                 key={post.id}
                 post={post}

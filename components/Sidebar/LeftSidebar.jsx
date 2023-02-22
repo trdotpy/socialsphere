@@ -26,7 +26,6 @@ export default function LeftSidebar() {
               />
             </svg>
             <span>CIALPHERE</span>
-            {/* <div className="ml-24 hidden md:block"></div> */}
           </div>
         </div>
         <div className="px-4 py-6">
@@ -45,9 +44,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6 text-sky-500"
@@ -67,9 +66,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -88,9 +87,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -109,9 +108,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -133,9 +132,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-green-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -160,9 +159,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -181,9 +180,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -205,9 +204,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-gray-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"
@@ -228,9 +227,9 @@ export default function LeftSidebar() {
                 <span className="flex items-center justify-center text-lg text-red-400">
                   <svg
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     className="h-6 w-6"

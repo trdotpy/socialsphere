@@ -5,7 +5,7 @@ import { trendingData } from "../../data/trendingData";
 export default function Trending() {
   return (
     <div className="flex min-h-screen flex-row text-gray-800">
-      <div className="w-60 translate-x-full transform transition-transform duration-150 ease-in md:translate-x-0">
+      <div className="w-64 translate-x-full transform transition-transform duration-150 ease-in md:translate-x-0">
         <span className="my-4 flex px-2 font-medium uppercase text-gray-400">
           Trending
         </span>
