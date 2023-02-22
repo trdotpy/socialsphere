@@ -1,48 +1,28 @@
-# Woof Social - The Social Network for Dogs 🐶
+# SocialSphere 🌏 - Social Media App
 
-## <a href="https://woof-social.vercel.app/">Live Demo</a>
-
-## Screenshots
-
-### Home
-
-<img src="./public/woof-ss-home.png">
-
-### Sign In
-
-<img src="./public/woof-ss-login.png">
-
-### Mobile
-
-<img src="./public/woof-ss-mobile.png">
-
-### Design Inspiration
-
-<img src="./public/design.png">
+<img src="./screenshots/sign-in.png">
 
 ## Overview
 
-Woof Social is a social network for dogs, inspired by Facebook.
+SocialSphere is a platform designed to foster genuine connection and community. We believe that social media should bring people together, not exploit their personal information or flood them with irrelevant content. That's why we are committed to creating a stronger, more authentic online experience for all of our users.
 
-**Note: This was just for fun - this app is not actually intended for dogs to use.**
+### <a href="https://socialsphere.vercel.app/">Demo</a>
 
-The home page consists of user stories, posts, notifications, news, a friends list and account info.
+<img src="./screenshots/dashboard-desktop.png">
 
-Users can create an account by signing in via Google and add posts to the timeline.
+<img src="./screenshots/dashboard-mobile.png">
 
-## Technology
+## Features & Technology
 
-![NextJS](https://img.shields.io/static/v1?style=for-the-badge&message=NextJS&color=black&logo=Next.js&logoColor=white&label=)
+- [Next.js](https://nextjs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Supabase](https://supabase.com/)
+- [Moment](https://momentjs.com/)
+- [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
+- [React Context](https://reactjs.org/docs/context.html)
 
-![Firebase](https://img.shields.io/static/v1?style=for-the-badge&message=Firebase&color=orange&logo=Firebase&logoColor=yello&label=)
-
-![TailwindCSS](https://img.shields.io/static/v1?style=for-the-badge&message=TailwindCSS&color=blue&logo=TailwindCSS&logoColor=white&label=)
-
-![Next-Auth](https://img.shields.io/static/v1?style=for-the-badge&message=Next-Auth&color=black&logo=NextAuth&logoColor=white&label=)
-
-![React-Icons](https://img.shields.io/static/v1?style=for-the-badge&message=React-Icons&color=blue&logo=React&logoColor=white&label=)
-
-## Install
+## Installation
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 
@@ -50,10 +30,10 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/trdotpy/woof-social
+$ git clone https://github.com/trdotpy/socialsphere
 
 # Go into the repository
-$ cd netflix-clone
+$ cd socialsphere
 
 # Install dependencies
 $ npm install

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function useData() {

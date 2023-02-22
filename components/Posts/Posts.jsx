@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import moment from "moment";
 
 export default function Posts({ post, profile }) {
@@ -25,8 +25,7 @@ export default function Posts({ post, profile }) {
         </div>
 
         <div className="mt-4 mb-6">
-          <div className="mb-3 text-xl font-bold"></div>
-          <div className="text-sm">{post.content}</div>
+          <span className="text-sm">{post.content}</span>
         </div>
         {/* Actions */}
         <div className="py-2 px-2">
