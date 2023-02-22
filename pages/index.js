@@ -1,19 +1,14 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar/Navbar";
-import Feed from "../components/Timeline/Feed";
-import Notifications from "../components/Notifications/Notifications";
-import Friends from "../components/Contacts/Friends";
-import News from "../components/News/News";
-import AccountCard from "../components/Account/AccountCard";
-import Sidebar from "../components/Navbar/Sidebar";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import Feed from "../components/Feed/Feed";
+import { useSession } from "@supabase/auth-helpers-react";
 import Login from "./login";
-import ArticleCard from "../components/ArticleCard";
-
+import LeftSidebar from "../components/Sidebar/LeftSidebar";
+import RightSidebar from "../components/Sidebar/RightSidebar";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   const session = useSession();
-  console.log(session);
 
   if (!session) {
     return <Login />;
@@ -27,16 +22,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
-        <Navbar />
+      <main>
+        <div className="">
+          <Navbar />
+        </div>
         <div className="flex justify-between">
-          <div className="hidden sm:flex flex-col p-4">
-            <Sidebar />
+          <div className="hidden w-64 bg-gray-50 md:block">
+            <LeftSidebar />
           </div>
-          <Feed />
-          <div className="flex flex-col pt-8 sm:px-4">
-            <News />
+          <div className="bg-gray-50 md:px-12">
+            <Feed />
           </div>
+          <div className="hidden w-64 bg-gray-50 md:block">
+            <RightSidebar />
+          </div>
+        </div>
+        <div>
+          <Footer />
         </div>
       </main>
     </div>

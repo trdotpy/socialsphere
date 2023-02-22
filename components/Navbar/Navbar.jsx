@@ -1,112 +1,31 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { GiAcorn } from "react-icons/gi";
 
 export default function Navbar() {
-  const supabase = useSupabaseClient();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  async function handleSignOut() {
-    await supabase.auth.signOut();
-  }
   return (
-    <div className="flex justify-center border-b border-gray-800 py-3 px-20">
-      <div className="flex items-center gap-x-2">
-        <div className="hidden items-center text-xl font-bold sm:flex">
-          <GiAcorn size={30} />
-        </div>
-
-        <div className="flex gap-x-4 border-gray-700 bg-transparent px-2 sm:hidden">
-          <a
-            href="#"
-            className="flex items-center rounded-md px-2.5 py-1.5 hover:bg-gray-800"
+    <>
+      <div className="flex items-center justify-center border-[1px] border-b border-gray-200 bg-gray-50 px-12 py-3 sm:hidden md:justify-between">
+        {/* Branding */}
+        <div className="inline-flex items-center text-xl">
+          <span>S</span>{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-6 w-6 text-rose-500"
           >
-            <div className="flex h-10 w-10 items-center justify-end overflow-hidden rounded-full md:justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            className="flex items-center rounded-md px-2.5 py-1.5 hover:bg-gray-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-end overflow-hidden rounded-full md:justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
-                />
-              </svg>
-            </div>
-          </a>
-
-          <a
-            href="#"
-            className="flex items-center rounded-md px-2.5 py-1.5 hover:bg-gray-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-end overflow-hidden rounded-full md:justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-            </div>
-          </a>
-
-          <button
-            className="flex items-center rounded-md px-2.5 py-1.5 hover:bg-gray-800"
-            onClick={handleSignOut}
-          >
-            <div className="flex h-10 w-10 items-center justify-end overflow-hidden rounded-full md:justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="h-6 w-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
-                />
-              </svg>
-            </div>
-          </button>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+            />
+          </svg>
+          <span>CIALPHERE</span>
         </div>
       </div>
-    </div>
+    </>
   );
 }

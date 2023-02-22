@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
       supabaseClient={supabaseClient}
       initialSession={pageProps.initialSession}
     >
-      <Component {...pageProps} />
+      <div className="text-gray-800">
+        <Component {...pageProps} />
+      </div>
     </SessionContextProvider>
   );
 }
