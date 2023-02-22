@@ -39,10 +39,12 @@ export default function useData() {
   function sendPost(e) {
     e.preventDefault();
 
+    const authorId = profile ? profile.id : null;
+
     supabase
       .from("posts")
       .insert({
-        author: session.user.id,
+        author: authorId,
         content,
       })
       .then((response) => {
