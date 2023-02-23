@@ -7,7 +7,7 @@ export default function Status({ profile, content, sendPost, setContent }) {
         <div className="flex items-center space-x-4 px-8 sm:px-0">
           <textarea
             name="message"
-            placeholder={`Post as: ${profile?.name}`}
+            placeholder={`Posting as: ${profile?.name}`}
             className="h-[45px] w-full rounded-lg border border-transparent bg-gray-100 px-3 py-3 text-sm text-black placeholder-gray-400"
             value={content}
             onChange={(e) => setContent(e.target.value)}
