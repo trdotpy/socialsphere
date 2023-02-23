@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Status({ profile, content, sendPost, setContent }) {
   return (
-    <div className="mb-12 w-full rounded bg-white shadow-lg">
+    <div className="mb-4 w-full rounded-lg bg-white shadow-lg">
       <form className="rounded-lg py-8 md:px-8">
         <div className="flex items-center space-x-4 px-8 sm:px-0">
           <textarea
             name="message"
-            placeholder={`What's up, ${profile?.name}?`}
+            placeholder={`Post as: ${profile?.name}`}
             className="h-[45px] w-full rounded-lg border border-transparent bg-gray-100 px-3 py-3 text-sm text-black placeholder-gray-400"
             value={content}
             onChange={(e) => setContent(e.target.value)}

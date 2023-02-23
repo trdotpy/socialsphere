@@ -30,7 +30,7 @@ export default function Home() {
           <div className="hidden w-64 bg-gray-50 md:block">
             <LeftSidebar />
           </div>
-          <div className="bg-gray-50 md:px-12">
+          <div className="w-full bg-gray-50">
             <Feed />
           </div>
           <div className="hidden w-64 bg-gray-50 md:block">

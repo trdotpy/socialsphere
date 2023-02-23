@@ -3,6 +3,7 @@ import Status from "../Status/Status";
 import Posts from "../Posts/Posts";
 import useData from "../../hooks/useData";
 import Stories from "../Stories/Stories";
+import SamplePosts from "../Posts/SamplePosts";
 
 export default function Feed() {
   const {
@@ -28,25 +29,27 @@ export default function Feed() {
       <div className="mb-4">
         <Stories />
       </div>
-      <div>
+      <div className="w-full">
         <Status
           profile={memoizedProfile}
           content={content}
           sendPost={sendPost}
           setContent={setContent}
         />
-        <div className="space-y-4">
-          {memoizedPosts?.length > 0 &&
-            memoizedPosts.map((post) => (
-              <Posts
-                key={post.id}
-                post={post}
-                profile={profile}
-                fetchProfile={fetchProfile}
-              />
-            ))}
-        </div>
       </div>
+
+      <div className="max-w-6xl">
+        {memoizedPosts?.length > 0 &&
+          memoizedPosts.map((post) => (
+            <Posts
+              key={post.id}
+              post={post}
+              profile={profile}
+              fetchProfile={fetchProfile}
+            />
+          ))}
+      </div>
+      <SamplePosts />
     </div>
   );
 }

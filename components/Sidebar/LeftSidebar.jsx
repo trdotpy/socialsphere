@@ -15,9 +15,9 @@ export default function LeftSidebar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeWidth={2}
               stroke="currentColor"
-              className="h-6 w-6 text-sky-500"
+              className="h-6 w-6 text-pink-500"
             >
               <path
                 strokeLinecap="round"
@@ -54,7 +54,7 @@ export default function LeftSidebar() {
                     <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                 </span>
-                <span className="ml-3">Home</span>
+                <span className="ml-3 text-sky-400">Home</span>
               </a>
             </li>
 
@@ -119,7 +119,7 @@ export default function LeftSidebar() {
                   </svg>
                 </span>
                 <span className="ml-3">People</span>
-                <span className="ml-auto flex h-6 items-center justify-center rounded-full bg-red-100 px-2 text-xs font-semibold text-pink-500">
+                <span className="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-red-400 px-2 text-xs font-semibold text-white">
                   38
                 </span>
               </a>
@@ -191,7 +191,7 @@ export default function LeftSidebar() {
                   </svg>
                 </span>
                 <span className="ml-3">Notifications</span>
-                <span className="ml-auto flex h-6 items-center justify-center rounded-full bg-red-100 px-2 text-xs font-semibold text-pink-500">
+                <span className="ml-auto flex h-7 w-7 items-center justify-center rounded-full bg-red-400 px-2 text-xs font-semibold text-white">
                   10
                 </span>
               </a>

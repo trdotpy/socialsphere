@@ -6,9 +6,9 @@ import Users from "../Users/Users";
 
 export default function RightSidebar() {
   return (
-    <div className="mr-12 pt-10">
+    <div className="mr-12 pt-8">
       <div className="mb-6">
-        <Account  />
+        <Account />
       </div>
       <div>{/* <Search /> */}</div>
       <div>

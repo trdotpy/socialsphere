@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function useData() {
@@ -11,40 +11,50 @@ export default function useData() {
   function fetchPosts() {
     supabase
       .from("posts")
-      .select("id, content, created_at")
+      .select("id, content, created_at, profiles(id, avatar, name)")
       .order("created_at", { ascending: false })
       .then((result) => {
-        console.log("posts", result);
+        // console.log("posts", result);
         setPosts(result.data);
       });
   }
 
-  function fetchProfile() {
-    const user = session.user;
+  // Function for fetching profile data
+  async function fetchProfile() {
+    const user = session?.user;
 
     if (user) {
-      supabase
+      const { data, error } = await supabase
         .from("profiles")
         .select("id, avatar, name")
-        .eq("id", user.id)
-        .then((result) => {
-          console.log("profiles", result);
-          if (result.data.length > 0) {
-            setProfile(result.data[0]);
-          }
-        });
+        .eq("id", user.id);
+
+      if (error) {
+        console.log(error);
+      } else if (data && data.length === 0) {
+        const { data: newProfileData, error: newProfileError } = await supabase
+          .from("profiles")
+          .insert({
+            id: user.id,
+            name: user.email,
+            avatar: user.user_metadata.avatar_url,
+          });
+
+        if (newProfileData && newProfileData.length > 0) {
+          setProfile(newProfileData[0]);
+        }
+      } else if (data && data.length > 0) {
+        setProfile(data[0]);
+      }
     }
   }
-
   function sendPost(e) {
     e.preventDefault();
-
-    const authorId = profile ? profile.id : null;
 
     supabase
       .from("posts")
       .insert({
-        author: authorId,
+        author: session.user.id,
         content,
       })
       .then((response) => {
@@ -61,6 +71,12 @@ export default function useData() {
       provider: "google",
     });
   }
+
+  useEffect(() => {
+    if (session) {
+      fetchProfile();
+    }
+  }, [session]);
 
   return {
     posts,

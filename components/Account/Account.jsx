@@ -18,7 +18,7 @@ export default function Account() {
       <div>
         {memoizedProfile && memoizedProfile.avatar && (
           <button
-            className="flex h-10 flex-row items-center rounded-lg px-3 text-gray-700"
+            className="flex h-14 w-14 flex-row items-center rounded-lg px-3 text-gray-700"
             onClick={() => {}}
           >
             <span className="flex items-center justify-center text-lg text-gray-400">
