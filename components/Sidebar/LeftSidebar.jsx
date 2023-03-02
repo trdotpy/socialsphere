@@ -26,6 +26,7 @@ export default function LeftSidebar() {
               />
             </svg>
             <span>CIALPHERE</span>
+						
           </div>
         </div>
         <div className="px-4 py-6">

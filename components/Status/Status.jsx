@@ -1,3 +1,4 @@
+import { IconPhoto } from "@tabler/icons-react";
 import React from "react";
 
 export default function Status({ profile, content, sendPost, setContent }) {
@@ -6,11 +7,10 @@ export default function Status({ profile, content, sendPost, setContent }) {
       <form className="rounded-lg py-8 md:px-8">
         <div className="flex items-center space-x-4 px-8 sm:px-0">
           <textarea
-            name="message"
             placeholder={`Posting as: ${profile?.name}`}
-            className="h-[45px] w-full rounded-lg border border-transparent bg-gray-100 px-3 py-3 text-sm text-black placeholder-gray-400"
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            className="textarea-bordered textarea textarea-md w-full"
           ></textarea>
         </div>
 
@@ -34,6 +34,7 @@ export default function Status({ profile, content, sendPost, setContent }) {
                 </svg>
               </span>
             </div>
+
             <div>
               <span className="flex cursor-pointer items-center rounded-full p-2 text-sky-500 transition duration-300 ease-out hover:bg-sky-500 hover:text-white">
                 <svg
@@ -80,10 +81,11 @@ export default function Status({ profile, content, sendPost, setContent }) {
 
           <div className="flex gap-x-3 pb-4 sm:pb-0">
             <button
-              className="flex items-center rounded-lg bg-sky-500 py-2 px-6 text-sm text-white shadow-lg"
+              type="button"
+              class="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-sky-500 py-2 px-4 text-sm font-semibold text-white transition-all hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
               onClick={sendPost}
             >
-              <span className="font-medium">Post</span>
+              Post
             </button>
           </div>
         </section>

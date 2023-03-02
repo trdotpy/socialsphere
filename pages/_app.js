@@ -1,9 +1,12 @@
 import "../styles/globals.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    import("preline");
+  }, []);
   const [supabaseClient] = useState(() => createBrowserSupabaseClient());
   return (
     <SessionContextProvider

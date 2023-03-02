@@ -10,9 +10,9 @@ import Footer from "../components/Footer/Footer";
 export default function Home() {
   const session = useSession();
 
-  if (!session) {
-    return <Login />;
-  }
+  // if (!session) {
+  //   return <Login />;
+  // }
 
   return (
     <div>

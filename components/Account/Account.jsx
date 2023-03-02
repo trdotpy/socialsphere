@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useMemo } from "react";
 import useData from "../../hooks/useData";
 
@@ -17,18 +18,19 @@ export default function Account() {
       <span className="text-sm font-medium">{memoizedProfile?.name}</span>
       <div>
         {memoizedProfile && memoizedProfile.avatar && (
-          <button
-            className="flex h-14 w-14 flex-row items-center rounded-lg px-3 text-gray-700"
-            onClick={() => {}}
-          >
-            <span className="flex items-center justify-center text-lg text-gray-400">
-              <img
+          <div class="group block flex-shrink-0">
+            <div class="flex items-center">
+              <Image
+                class="inline-block h-[2.2rem] w-[2.2rem] flex-shrink-0 rounded-full"
                 src={memoizedProfile.avatar}
-                alt="profile-pic"
-                className="h-8 w-8 rounded-full object-cover shadow-md"
+                alt="avatar"
               />
-            </span>
-          </button>
+              <div class="ml-3">
+                <h3 class="font-semibold text-gray-600">Profile</h3>
+                <p class="text-sm font-medium text-gray-400">maria@gmail.com</p>
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>

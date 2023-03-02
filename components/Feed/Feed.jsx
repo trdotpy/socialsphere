@@ -49,6 +49,7 @@ export default function Feed() {
             />
           ))}
       </div>
+
       <SamplePosts />
     </div>
   );
