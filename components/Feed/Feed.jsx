@@ -38,7 +38,7 @@ export default function Feed() {
         />
       </div>
 
-      <div className="max-w-6xl">
+      <div className="w-full">
         {memoizedPosts?.length > 0 &&
           memoizedPosts.map((post) => (
             <Posts
