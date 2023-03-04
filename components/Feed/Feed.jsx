@@ -38,7 +38,7 @@ export default function Feed() {
         />
       </div>
 
-      <div className="w-full">
+      <div className="w-full space-y-8 pb-4">
         {memoizedPosts?.length > 0 &&
           memoizedPosts.map((post) => (
             <Posts

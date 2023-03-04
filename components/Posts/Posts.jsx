@@ -1,22 +1,35 @@
 import React from "react";
 import moment from "moment";
 import SamplePosts from "./SamplePosts";
+import Image from "next/image";
 
 export default function Posts({ post }) {
   const date = new Date(post.created_at);
   const timeAgo = moment(date).fromNow();
 
   return (
-    <div className="space-y-8">
+    <div>
       <div className="rounded-lg bg-white p-5 shadow-lg">
         <div className="flex w-full items-center justify-between border-b pb-3">
           <div className="flex items-center space-x-3">
             <div>
-              <img
-                src={post.profiles?.avatar}
-                alt="profile-pic"
-                className="h-8 w-8 rounded-full"
-              />
+              {post.profiles.avatar ? (
+                <Image
+                  src={post.profiles?.avatar}
+                  className="h-8 w-8 rounded-full"
+                  height={32}
+                  width={32}
+                  alt="profile-pic"
+                />
+              ) : (
+                <Image
+                  src="https://res.cloudinary.com/drij60fru/image/upload/v1677951897/Social%20Network%20App/social_y7j4we.svg"
+                  className="h-8 w-8 rounded-full"
+                  height={32}
+                  width={32}
+                  alt="profile-pic"
+                />
+              )}
             </div>
             <h2 className="text-sm font-medium">{post.profiles?.name}</h2>
           </div>
